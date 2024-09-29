@@ -4,42 +4,49 @@
       "id": 1,
       "conteudo": "We are the champions my friends!!!",
       "autoria": "Queen",
-      "modelo": "modelo1"
+      "modelo": "modelo1",
+      "favorito": false
     },
     {
       "id": 2,
       "conteudo": "Na minha máquina funciona!",
       "autoria": "Dev da madrugada",
-      "modelo": "modelo2"
+      "modelo": "modelo2",
+      "favorito": false
     },
     {
       "id": 3,
       "conteudo": "Continue a codar... continue a codar...",
       "autoria": "Dory programadora",
-      "modelo": "modelo3"
+      "modelo": "modelo3",
+      "favorito": false
     },
     {
       "conteudo": "Testando função de editar",
       "autoria": "Angular ",
       "modelo": "modelo2",
+      "favorito": false,
       "id": 4
     },
     {
       "conteudo": "Serei um otimo desenvolvedor full stack",
       "autoria": "Thierry",
       "modelo": "modelo3",
+      "favorito": false,
       "id": 5
     },
     {
       "conteudo": "To começando a desenvolver minhas habilidades em angular",
       "autoria": "Thierry",
       "modelo": "modelo2",
+      "favorito": false,
       "id": 6
     },
     {
       "conteudo": "quero aprender angular e react ",
       "autoria": "Thierry",
       "modelo": "modelo1",
+      "favorito": false,
       "id": 7
     }
   ]

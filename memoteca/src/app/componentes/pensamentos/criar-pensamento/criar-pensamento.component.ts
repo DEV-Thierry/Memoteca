@@ -10,7 +10,6 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./criar-pensamento.component.css']
 })
 export class CriarPensamentoComponent implements OnInit {
-
   formulario!: FormGroup;
 
   constructor(
@@ -29,8 +28,8 @@ export class CriarPensamentoComponent implements OnInit {
         Validators.required,
         Validators.minLength(3)
       ])],
-
-      modelo: ['modelo1']
+      modelo: ['modelo1'],
+      favorito: [false]
     })
   }
 
@@ -41,15 +40,6 @@ export class CriarPensamentoComponent implements OnInit {
       this.service.criar(this.formulario.value).subscribe(() => {
         this.router.navigate(['/listarPensamento'])
       })
-    }
-  }
-
-  habilitarBotao(): string{
-    if(this.formulario.valid)
-    {
-      return 'botao'
-    }else {
-      return 'botao__desabilitado'
     }
   }
 

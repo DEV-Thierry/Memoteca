@@ -97,7 +97,7 @@
       <button
         [disabled]="!formulario.valid"
         (click)="criarPensamento()"
-        [ngClass]="habilitarBotao()">Salvar
+        [ngClass]="formulario.valid? 'botao': 'botao__desabilitado' ">Salvar
       </button>
 
       <button (click)="cancelar()" class="botao">Cancelar</button>
