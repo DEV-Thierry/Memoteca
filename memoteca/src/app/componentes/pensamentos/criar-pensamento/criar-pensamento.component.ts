@@ -29,16 +29,27 @@ export class CriarPensamentoComponent implements OnInit {
         Validators.required,
         Validators.minLength(3)
       ])],
+
       modelo: ['modelo1']
     })
   }
 
   criarPensamento() {
+    console.error(this.formulario.get('autoria')?.errors)
     if(this.formulario.valid)
     {
       this.service.criar(this.formulario.value).subscribe(() => {
         this.router.navigate(['/listarPensamento'])
       })
+    }
+  }
+
+  habilitarBotao(): string{
+    if(this.formulario.valid)
+    {
+      return 'botao'
+    }else {
+      return 'botao__desabilitado'
     }
   }
 
