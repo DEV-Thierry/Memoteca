@@ -17,6 +17,8 @@ export class PensamentoComponent implements OnInit {
     favorito: false
   }
 
+  @Input() listaVaforitos: Pensamento[]= [];
+
   constructor(private service: PensamentoService) { }
 
   ngOnInit(): void {
@@ -30,7 +32,10 @@ export class PensamentoComponent implements OnInit {
   }
 
   atualizarFavoritos(){
-    this.service.mudarFavorito(this.pensamento).subscribe();
+    this.service.mudarFavorito(this.pensamento).subscribe(() =>{
+      this.listaVaforitos.splice(this.listaVaforitos.indexOf(this.pensamento), 1)
+    });
+
   }
 
 }
